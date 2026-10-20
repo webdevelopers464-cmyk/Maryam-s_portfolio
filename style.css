@@ -1721,3 +1721,259 @@ blockquote,
         scroll-behavior: auto !important;
     }
 }
+
+/* =========================================================
+   FINAL MOBILE HERO REFINEMENT — based on the supplied
+   phone screenshot. Keeps the original desktop design intact.
+   ========================================================= */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+}
+
+body {
+    overflow-x: clip;
+}
+
+img,
+video,
+canvas,
+svg {
+    max-width: 100%;
+}
+
+@media (max-width: 600px) {
+    nav {
+        min-height: 76px;
+        padding-top: 14px;
+        padding-bottom: 14px;
+        gap: 12px;
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        min-height: auto;
+        padding: 104px 5% 56px;
+        gap: 0;
+        overflow: clip;
+    }
+
+    .hero-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 34px;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .frame-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        margin: 0 auto;
+    }
+
+    .frame {
+        width: min(74%, 290px);
+        max-width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        transform: none;
+    }
+
+    .frame img,
+    .frame picture,
+    .frame picture img {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: center top;
+    }
+
+    .frame-caption {
+        position: static;
+        inset: auto;
+        transform: none;
+        width: 100%;
+        max-width: 100%;
+        margin: 16px auto 0;
+        padding: 0 4%;
+        text-align: center;
+        white-space: normal;
+        overflow-wrap: anywhere;
+        line-height: 1.6;
+        letter-spacing: .14em;
+    }
+
+    .hero-text {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .hero-text .eyebrow {
+        margin: 0 auto 20px;
+        line-height: 1.7;
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+
+    .hero-title {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        font-size: clamp(2.4rem, 10.5vw, 3.7rem);
+        line-height: 1.02;
+        overflow-wrap: normal;
+        word-break: normal;
+    }
+
+    .hero-title em {
+        display: block;
+        overflow-wrap: anywhere;
+    }
+
+    .hero-sub {
+        width: 100%;
+        max-width: 100%;
+        margin: 20px auto 0;
+        font-size: clamp(1rem, 4.1vw, 1.2rem);
+        line-height: 1.7;
+        text-align: center;
+        overflow-wrap: anywhere;
+    }
+
+    .hero-ctas {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        max-width: 340px;
+        margin: 28px auto 0;
+        gap: 12px;
+    }
+
+    .hero-ctas .btn {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        min-height: 46px;
+    }
+
+    .scroll-cue {
+        display: none;
+    }
+
+    .section-pad {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+@media (max-width: 380px) {
+    nav {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .logo {
+        max-width: 60%;
+        overflow-wrap: anywhere;
+    }
+
+    .hero {
+        padding: 96px 4% 48px;
+    }
+
+    .hero-inner {
+        gap: 28px;
+    }
+
+    .frame {
+        width: min(76%, 250px);
+    }
+
+    .frame-caption {
+        padding-left: 2%;
+        padding-right: 2%;
+        font-size: .72rem;
+        letter-spacing: .12em;
+    }
+
+    .hero-title {
+        font-size: clamp(2.15rem, 10vw, 2.7rem);
+    }
+
+    .hero-sub {
+        font-size: .98rem;
+        line-height: 1.65;
+    }
+
+    .hero-ctas {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    .hero {
+        min-height: auto;
+        padding: 120px 6% 72px;
+    }
+
+    .hero-inner {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 38px;
+    }
+
+    .frame-wrap {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .frame {
+        width: min(58%, 340px);
+        max-width: 100%;
+    }
+
+    .frame-caption {
+        position: static;
+        transform: none;
+        margin: 16px auto 0;
+        max-width: 100%;
+        text-align: center;
+        white-space: normal;
+    }
+
+    .hero-text {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .hero-sub {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-ctas {
+        justify-content: center;
+    }
+}
